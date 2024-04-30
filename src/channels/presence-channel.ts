@@ -122,7 +122,9 @@ export class PresenceChannel {
                 let member = members.find(
                     (member) => member.socketId == socket.id
                 );
-                members = members.filter((m) => m.socketId != member.socketId);
+                members = members.filter(function(m){
+                    return member.socketId == undefined || m.socketId != member.socketId
+                });
 
                 this.db.set(channel + ":members", members);
 
