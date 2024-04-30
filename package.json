@@ -1,6 +1,6 @@
 {
   "name": "wivoce-laravel-echo-server",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "Wivoce Laravel Echo Node JS Server for Socket.io",
   "repository": {
     "type": "git",
