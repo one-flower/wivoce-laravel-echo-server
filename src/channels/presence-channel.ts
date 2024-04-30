@@ -32,7 +32,7 @@ export class PresenceChannel {
                     this.removeInactive(channel, members, member).then(
                         (members: any) => {
                             let search = members.filter(
-                                (m) => member && m.user_id == member.user_id
+                                (m) => member && member.user_id && m.user_id == member.user_id
                             );
 
                             if (search && search.length) {
