@@ -91,13 +91,9 @@ export class PresenceChannel {
                         members = members || [];
                         member.socketId = socket.id;
                         members.push(member);
-
-                        this.db.set(channel + ":members", members);
-
                         members = _.uniqBy(members.reverse(), "user_id");
-
+                        this.db.set(channel + ":members", members);
                         this.onSubscribed(socket, channel, members);
-
                         if (!is_member) {
                             this.onJoin(socket, channel, member);
                         }
